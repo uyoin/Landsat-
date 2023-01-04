@@ -26,7 +26,7 @@ import os
   ①其中find_filesPaths（root_dir，search_string）函数主要功能是根据提供的文件名和路径，提取路径下以及子目录下的文件名与输入文件名匹配的文件名与路径。首先初始化空list，用于保存找到的档案的完整路径和文件名。之后使用os.walk函数遍历指定文件夹及其子文件夹的所有档案，root表示当前遍历到的档案所在目录的路径，dirs表示目前的目录下的所有子文件夹名称，files表示目前的目录下的所有文件名。遍历目前的目录下的所有档案，如果文件名包含指定的搜索字符，则将档案的完整路径和文件名保存到list中，否则直接进入下一个循环。在所有档案都遍历完后，返回保存找到的档案信息的list。  
   ②find_imgName（img_path）函数主要功能是获取img_path路径下图像的名称。首先初始化两个空list，path_list和imgName。之后，判断传入的参数img_path是否为字符串，如果是，则折分字符串，将倒数第二个字符串（图像名）赋值给imgName。如果不是，则进行循环。在循环中，将清单img_path的第i个元素的第一个元素加入到path_list中。将path_list的第i个元素折开为字符串list，并将倒数第二个字符串加入到imgName中。最后，返回列表imgName。  
 ## extractMTLparameter.py
-“extractMTLparameter.py”由两个函数组成：extract_L1values（txt_file_path）、extract_L2values（txt_file_path），是实现根据不同级别图像提取不同方法的核心代码。
+“extractMTLparameter.py”由两个函数组成：extract_L1values（txt_file_path）、extract_L2values（txt_file_path），是实现根据不同级别图像提取不同方法的核心代码。  
   ①extract_L1values（txt_file_path）函数主要功能是使用已经写好的模块去判断txt_file_path下图像的传感器类型，从而实现不同传感器取参的方式不同，提高泛用性。主要是通过遍历MTL头文件中的每一行，从中分割出每一个单词，并通过判断第一个单词是否等于预定义的字符串来选取出其中的参数值。如果是则提取出后面的参数值，并将其赋值给相应的参数存放，最终进行多个参数的返回。  
   ②extract_L2values（txt_file_path）函数与L1同理。
 ## getTemp.py
