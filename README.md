@@ -1,7 +1,7 @@
 # Landsat-TemperatuReretrieval-main
 本项目通过Arcpy库实现Landsat影像温度的自动反演，而参数的自动选取则是通过自己编写的主模块外的其他模块实现，所有的一切只需要提供影像所在的目录就好。
 # 所需库
-``` 
+``` python
 import arcpy
 import os
 ``` 
