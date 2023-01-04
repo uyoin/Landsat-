@@ -6,13 +6,13 @@ import arcpy
 import os
 ``` 
 # 使用
-打开“main.py”代码，输入以下四个参数即可：
+## 打开“main.py”代码，输入以下四个参数即可：
 ### ①root_dir：影像所在根目录
 ### ②temp_gdb_path：存放临时处理数据的gdb路径,例如："D:\temp.gdb"（若不存在会自动创建）（结束会自动清理）
 ### ③result_gdb_path：存放结果的gdb路径,例如："D:\result.gdb"（若不存在会自动创建）
 ### ④reacher_area：研究区shp的路径，例如："D:\厦门.shp"
 # 代码主要功能与实现大致流程原理
-本项目由五部分组成：“mian.py”、“initialize.py”、“extractPath.py”，“extractMTLparameter.py”、“getTemp.py”。
+本项目由五部分组成：“mian.py”、“initialize.py”、“extractPath.py”，“extractMTLparameter.py”、“getTemp.py”。  
 其中“mian.py”是主函数，在此设置程序的主入口，调用“extractPath.py”，“extractMTLparameter.py”、“getTemp.py”所编写的函数进行基于Arcpy库批量自动化温度反演流程。
 ## initialize.py
 “initialize.py”由五个函数组成：create_gdb（gdb_path）、judge_sensor（img_path）、judge_level_frequency（img_path）、judge_level_path（img_path）、level_info（img_path）。
